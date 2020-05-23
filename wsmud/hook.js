@@ -202,6 +202,7 @@ var xx = {
         !get('嗜血') && sock.send('perform blade.shi');
         !get('逆转九阴') && sock.send('perform force.cui');
         !get('移花') && sock.send('perform parry.yi');
+        !get('混沌') && sock.send('perform force.busi');
         //sock.send('kill krxn4bf661a')
         for (let i of cmd) sock.send('perform ' + i);
       }
@@ -485,6 +486,10 @@ var xx = {
               sock.send('perform ' + i);
               continue;
             }
+            if (i == 'force.busi' && !get('混沌')) {
+                sock.send('perform ' + i);
+                continue;
+              }
           }
         }
         for(let l of skill) {
