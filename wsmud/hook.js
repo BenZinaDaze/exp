@@ -227,8 +227,8 @@ var xx = {
             if (taskitem[i].sale.includes(item)) {
               buy.npc = i;
               buy.item = item;
-              return;
               click(taskitem[i].way);
+              return;
             }
           }
           buy.item = item;
