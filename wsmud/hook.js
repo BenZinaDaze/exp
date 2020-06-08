@@ -59,8 +59,8 @@ var xx = {
     xy: 'jh fam 5 start,go down,go down',
     gb: 'jh fam 6 start,go down,go east,go east,go east,go east,go east,go up',
     zb: 'jh fam 0 start,go west,go west,go north,go enter,go west,xiulian',
-    zhan: 'enable force j1sa1a740e9,enable dodge lingxibu,enable unarmed liumaishenjian,enable sword xuantiejianfa,eq 5oj14e192ac,eq u3ps333f6fc,eq ler04e192a7,eq b7vz2cfbe93,eq l3j72bc995f,eq frf1498cb22,eq rf462e55984,eq mphr38f89b5',
-    lian: 'enable dodge lingxibu,enable sword quanzhenjianfa,enable force shenzhaojing,enable unarmed anranxiaohun,eq qq041a77836,eq xdfe255a136,eq 98f528c3cf8,eq ct1w3b1e226,eq lknk3719a1b,eq 0r3u5e7e336,eq 2pmh3b492e5,eq lhu1581846f'
+    zhan: 'enable force j1sa1a740e9,enable dodge lingxibu,enable unarmed liumaishenjian,enable sword xuantiejianfa,enable club j1sa1a740e9,eq 5oj14e192ac,eq u3ps333f6fc,eq ler04e192a7,eq b7vz2cfbe93,eq l3j72bc995f,eq frf1498cb22,eq rf462e55984,eq mphr38f89b5',
+    lian: 'enable dodge lingxibu,enable sword quanzhenjianfa,enable force shenzhaojing,enable unarmed anranxiaohun,enable club none,eq qq041a77836,eq xdfe255a136,eq 98f528c3cf8,eq ct1w3b1e226,eq lknk3719a1b,eq 0r3u5e7e336,eq 2pmh3b492e5,eq lhu1581846f'
   },
   taskinfo = {
     '武当派': ['武当派第三代弟子 谷虚道长', 'jh fam 1 start,go north'],
@@ -91,7 +91,7 @@ var xx = {
   },
   //cmd = 'force.xin,force.ling,sword.zhong,sword.chao,unarmed.qi,unarmed.liu,unarmed.ref,parry.chang,parry.hou,throwing.luo,throwing.ding'.split(',')
   cmd = 'blade.xue,blade.ref,unarmed.qi,unarmed.liu,throwing.luo'.split(','),
-  ban = ['parry.yi', 'parry.dao', 'force.cui', 'blade.shi', 'force.zhui', 'parry.dou'];
+  ban = ['parry.yi', 'parry.dao', 'force.cui', 'blade.shi', 'force.zhui', 'parry.dou','force.busi'];
   function hook(msg) {
     var a = msg[0] == '{' || msg[0] == '[' ? eval(`(${msg})`): {type:'text',msg}
     if (a.type == 'itemadd') {
