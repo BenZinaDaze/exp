@@ -2,7 +2,7 @@
  * @Description:
  * @Author: benz1
  * @Date: 2021-12-16 15:19:31
- * @LastEditTime: 2021-12-16 16:35:15
+ * @LastEditTime: 2021-12-16 16:40:23
  * @LastEditors: benz1
  * @Reference:
  */
@@ -11,6 +11,7 @@ import https from "https";
 import request from "request";
 
 const newPath = "./new"
+const oldPath = "./image"
 
 const options = {
   host: "tinypng.com",
@@ -27,9 +28,9 @@ const options = {
   },
 };
 
-fs.readdir("./pic", function (err: any, files: any) {
+fs.readdir(oldPath, function (err: any, files: any) {
   for (let i = 0; i < files.length; i++) {
-    let image = fs.readFileSync("./pic/" + files[i]);
+    let image = fs.readFileSync(oldPath + "/" + files[i]);
     if (!fs.existsSync(newPath)) {
       fs.mkdirSync(newPath);
     }
